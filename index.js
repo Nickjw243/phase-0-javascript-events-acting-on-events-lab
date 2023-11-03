@@ -17,19 +17,19 @@ function moveDodgerRight() {
     }
 }
 function moveDodgerUp() {
-  const topNumbers = dodger.style.top.replace("px", "");
-  const top = parseInt(topNumbers, 10);
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
+  const bottom = parseInt(bottomNumbers, 10);
 
-  if (top > 0) {
-    dodger.style.top = `${top + 5}px`
+  if (bottom > 0) {
+    dodger.style.bottom = `${bottom + 5}px`
   }
 }
 function moveDodgerDown() {
-  const bottomNumbers = dodger.style.top.replace("px", "");
+  const bottomNumbers = dodger.style.bottom.replace("px", "");
   const bottom = parseInt(bottomNumbers, 10)
 
-  if (bottom < 400) {
-    dodger.style.top = `${bottom - 5}px`
+  if (bottom < 360) {
+    dodger.style.bottom = `${bottom - 5}px`
   }
 }
 document.addEventListener("keydown", function (e) {
